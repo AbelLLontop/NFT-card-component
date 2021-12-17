@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    background-color: #0D1A2D;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: #15273F;
+    width: 20rem;
+    padding: 1.4rem;
+    border-radius: .8rem;
+    gap:1.4rem;
+    box-shadow: 0 1.4rem 0 1rem  #0C1729,
+    0 1.4rem 0 2.8rem #0C192C;
+   
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-duration: .4s;
+}
+
+.card:hover{
+    animation-name: animar;
+}
+
+@keyframes animar{
+    0%{
+        transform: rotate3d(1,1,1,0);
+        box-shadow: 0 1.4rem 0 1rem  #0C1729,
+        0 1.4rem 0 2.8rem #182a46;
+    }
+    25%{
+        transform: rotate3d(1,1,1,2deg);
+        box-shadow: 0 1.4rem 0 1rem  #0C1729,
+        0 1.4rem 0 0 #0c2c21;
+    }
+    50%{
+        transform: rotate3d(1,1,1,-2deg);
+        box-shadow: 0 1.4rem 0 1rem  #0C1729,
+        0 1.4rem 0 2.8rem #1f9bb9;
+    }
+    75%{
+        transform: rotate3d(1,1,1,2deg);
+        box-shadow: 0 1.4rem 0 1rem  #0C1729,
+        0 1.4rem 0 0 #0c2c2c;
+    }
+    100%{
+        transform: rotate3d(1,1,1,0);
+        box-shadow: 0 1.4rem 0 1rem  #0C1729,
+    0 1.4rem 0 2.8rem #0C192C;
+    }
+}
+
+
+
+
+.card>.image{
+   overflow: hidden;
+   border-radius: .4rem;
+   width: 100%;
+   height: 17rem;
+   position: relative;
+   cursor: pointer;
+
+}
+.card>.image:hover > .hover-view{
+    opacity: 1;
+    
+}
+.card>.image .hover-view{
+    transition: opacity .2s ease-out;
+    opacity: 0;
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #04eaff8c;
+}
+
+.card .title{
+    color:#F3F6FA;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.card .description{
+    padding-top: 1rem;
+    color:#7993B1;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin-top: -1;
+}
+
+.card>.details{
+    display: flex;
+    justify-content: space-between;
+}
+.card>.details>.detail{
+    display: flex;
+    align-items: center;
+    gap:.4rem;
+    
+}
+.detail.money{
+    color:#05FBFB;
+    font-weight: 700;
+}
+.detail.date{
+    color:#90AFDB;
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.user{
+    display: flex;
+    align-items: center;
+    gap:.8rem;
+    border-top:solid .1rem #24364E;
+    padding-top: .8rem;
+    color:#8297B4;
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+.user>.avatar{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border:solid .1rem white;
+
+}
+
+.hover-paint{
+    cursor: pointer;
+}
+.hover-paint:hover{
+    color:#00FFF8;
+}
+.user span{
+    color:#E7F4F9;
+    font-weight: 400;
+   
+}
